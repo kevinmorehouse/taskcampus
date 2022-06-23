@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main>
+  <div id='room-name-wrapper'>
+    <p>Room Name: <span id='room-name'></span></p>
+  </div>
+
+  <div id='video-streams'></div>
+
+
+  <div id='controls-wrapper'>
+    <div class='icon-wrapper'>
+      <img class="control-icon" id="mic-btn" src="{% static 'images/microphone.png' %}">
+      <img class="control-icon" id="camera-btn" src="{% static 'images/video-camera.png' %}">
+      <img class="control-icon" id="leave-btn" src="{% static 'images/exit.png' %}">
+    </div>
+  </div>
+
+  <!-- <form id='form'>
+    <input type="text" name='message'>
+  </form>
+
+  <div id='messages'></div> -->
+
+</main>
+<script src="{% static 'assets/agora-rtm-sdk-1.4.5.js' %}"></script>
+<script src="{% static 'assets/AgoraRTC_N-4.11.1.js' %}"></script>
+<script type='text/javascript' src="{% static 'js/streams.js' %}"></script>
+{% endblock content %}
